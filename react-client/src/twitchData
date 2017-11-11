@@ -1,0 +1,256 @@
+
+var twitchData = {
+    "data": [
+        {
+            "id": "26699416464",
+            "user_id": "26301881",
+            "game_id": "18122",
+            "community_ids": [],
+            "type": "live",
+            "title": "I got a haircut -__- and Im back, still a bit sick, but i am back <3....again ",
+            "viewer_count": 27096,
+            "started_at": "2017-11-10T22:02:41Z",
+            "language": "en",
+            "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_sodapoppin-{width}x{height}.jpg"
+        },
+        {
+            "id": "26698966800",
+            "user_id": "40017619",
+            "game_id": "21779",
+            "community_ids": [],
+            "type": "live",
+            "title": "TSM Doublelift - new and improved stream with one thousand and eighty horizontal lines of vertical resolution for your viewing pleasure",
+            "viewer_count": 23150,
+            "started_at": "2017-11-10T21:12:04Z",
+            "language": "en",
+            "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_doublelift-{width}x{height}.jpg"
+        },
+        {
+            "id": "26697388288",
+            "user_id": "37402112",
+            "game_id": "496712",
+            "community_ids": [],
+            "type": "live",
+            "title": "ZOMBIEEEES!! | Follow https://twitter.com/c9shroud",
+            "viewer_count": 23072,
+            "started_at": "2017-11-10T18:38:12Z",
+            "language": "en",
+            "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_shroud-{width}x{height}.jpg"
+        },
+        {
+            "id": "26701370784",
+            "user_id": "109724636",
+            "game_id": "494995",
+            "community_ids": [],
+            "type": "live",
+            "title": "The Injustice 2 World Championship / Playoffs: Live Now!",
+            "viewer_count": 18605,
+            "started_at": "2017-11-11T02:31:31Z",
+            "language": "en",
+            "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_eleaguetv-{width}x{height}.jpg"
+        },
+        {
+            "id": "26698013456",
+            "user_id": "26490481",
+            "game_id": "493277",
+            "community_ids": [],
+            "type": "live",
+            "title": "more stuff - [ Follow @summit1g ]",
+            "viewer_count": 13825,
+            "started_at": "2017-11-10T19:56:04Z",
+            "language": "en",
+            "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_summit1g-{width}x{height}.jpg"
+        },
+        {
+            "id": "26698826368",
+            "user_id": "47071880",
+            "game_id": "21779",
+            "community_ids": [
+                "5c5a67db-215f-4c38-82c5-454d9983cfb5",
+                "ad14d4fc-1a7c-413f-aa32-4906ef3669ae",
+                "ec185ed7-601d-4afc-a5d3-1570cd9ec3b3"
+            ],
+            "type": "live",
+            "title": "YoDa - TryHard Igual aos velhos tempos\nNovidades em Breve full assassino",
+            "viewer_count": 13284,
+            "started_at": "2017-11-10T21:03:40Z",
+            "language": "pt-br",
+            "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_yoda-{width}x{height}.jpg"
+        },
+        {
+            "id": "26696375056",
+            "user_id": "19571641",
+            "game_id": "33214",
+            "community_ids": [],
+            "type": "live",
+            "title": "Fortnite",
+            "viewer_count": 9407,
+            "started_at": "2017-11-10T16:07:52Z",
+            "language": "en",
+            "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_ninja-{width}x{height}.jpg"
+        },
+        {
+            "id": "26696070992",
+            "user_id": "12875057",
+            "game_id": "494717",
+            "community_ids": [],
+            "type": "live",
+            "title": "★ #FreiAb(kurznach)16 ★",
+            "viewer_count": 8153,
+            "started_at": "2017-11-10T15:16:08Z",
+            "language": "de",
+            "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_gronkh-{width}x{height}.jpg"
+        },
+        {
+            "id": "26701059792",
+            "user_id": "60978448",
+            "game_id": "138585",
+            "community_ids": [],
+            "type": "live",
+            "title": "Dog - stuff- - !vg later",
+            "viewer_count": 7222,
+            "started_at": "2017-11-11T01:48:29Z",
+            "language": "en",
+            "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_hsdogdog-{width}x{height}.jpg"
+        },
+        {
+            "id": "26701511344",
+            "user_id": "121059319",
+            "game_id": "488552",
+            "community_ids": [],
+            "type": "live",
+            "title": "[ !PLACEMENTS ] main account monkaMEGA",
+            "viewer_count": 7092,
+            "started_at": "2017-11-11T02:51:50Z",
+            "language": "en",
+            "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_moonmoon_ow-{width}x{height}.jpg"
+        },
+        {
+            "id": "26701458816",
+            "user_id": "138515021",
+            "game_id": "494717",
+            "community_ids": [],
+            "type": "live",
+            "title": "안녕하세여",
+            "viewer_count": 6429,
+            "started_at": "2017-11-11T02:44:09Z",
+            "language": "ko",
+            "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_gmdkdsla-{width}x{height}.jpg"
+        },
+        {
+            "id": "26699479328",
+            "user_id": "87204022",
+            "game_id": "493277",
+            "community_ids": [],
+            "type": "live",
+            "title": "Disguised Toast - Battlerite w/ Lily and Poki - #ad",
+            "viewer_count": 6396,
+            "started_at": "2017-11-10T22:10:29Z",
+            "language": "en",
+            "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_disguisedtoasths-{width}x{height}.jpg"
+        },
+        {
+            "id": "26700744976",
+            "user_id": "93049594",
+            "game_id": "138585",
+            "community_ids": [],
+            "type": "live",
+            "title": "공혁준 전설간다",
+            "viewer_count": 6177,
+            "started_at": "2017-11-11T01:04:20Z",
+            "language": "ko",
+            "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_rhdgurwns-{width}x{height}.jpg"
+        },
+        {
+            "id": "26699036816",
+            "user_id": "14408894",
+            "game_id": "33214",
+            "community_ids": [],
+            "type": "live",
+            "title": "Even When we Lose we Win! | Riding ALL ROCKETS! | [330+ Wins] | Twitter: @CDNThe3rd | !NewVid | #TheViewage | [+]YLT",
+            "viewer_count": 5829,
+            "started_at": "2017-11-10T21:16:35Z",
+            "language": "en",
+            "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_cdnthe3rd-{width}x{height}.jpg"
+        },
+        {
+            "id": "26700721664",
+            "user_id": "84574550",
+            "game_id": "488552",
+            "community_ids": [
+                "8ea1e94f-4015-4f38-bd7e-745d8f42539a"
+            ],
+            "type": "live",
+            "title": "TSM Calvin | different routes !facecam",
+            "viewer_count": 5801,
+            "started_at": "2017-11-11T01:01:12Z",
+            "language": "en",
+            "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_aimbotcalvin-{width}x{height}.jpg"
+        },
+        {
+            "id": "26701666816",
+            "user_id": "41783889",
+            "game_id": "493057",
+            "community_ids": [],
+            "type": "live",
+            "title": "aX30 - Live do 🆇🆀🅳🅻",
+            "viewer_count": 4373,
+            "started_at": "2017-11-11T03:14:25Z",
+            "language": "pt-br",
+            "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_axtlol-{width}x{height}.jpg"
+        },
+        {
+            "id": "26698753984",
+            "user_id": "30171560",
+            "game_id": "21779",
+            "community_ids": [],
+            "type": "live",
+            "title": "Runes Reformed Day 3. They still don't realize phase rush is actually OP :^)",
+            "viewer_count": 4192,
+            "started_at": "2017-11-10T20:58:34Z",
+            "language": "en",
+            "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_wingsofdeath-{width}x{height}.jpg"
+        },
+        {
+            "id": "26697424976",
+            "user_id": "71092938",
+            "game_id": "488552",
+            "community_ids": [],
+            "type": "live",
+            "title": "xQc | Duo w/ Calvin | !cup !highlights",
+            "viewer_count": 4132,
+            "started_at": "2017-11-10T18:43:22Z",
+            "language": "en",
+            "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_xqcow-{width}x{height}.jpg"
+        },
+        {
+            "id": "26697116800",
+            "user_id": "40972890",
+            "game_id": "494648",
+            "community_ids": [],
+            "type": "live",
+            "title": "Finish this game and then who knows what else after",
+            "viewer_count": 4000,
+            "started_at": "2017-11-10T18:00:47Z",
+            "language": "en",
+            "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_admiralbahroo-{width}x{height}.jpg"
+        },
+        {
+            "id": "26699212400",
+            "user_id": "22561231",
+            "game_id": "29595",
+            "community_ids": [],
+            "type": "live",
+            "title": "Playing pubs and trying new heroes!",
+            "viewer_count": 3988,
+            "started_at": "2017-11-10T21:36:43Z",
+            "language": "en",
+            "thumbnail_url": "https://static-cdn.jtvnw.net/previews-ttv/live_user_purgegamers-{width}x{height}.jpg"
+        }
+    ],
+    "pagination": {
+        "cursor": "eyJiIjpudWxsLCJhIjp7Ik9mZnNldCI6MjB9fQ"
+    }
+}
+
+export default twitchData;

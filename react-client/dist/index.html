@@ -5,12 +5,27 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 <!--   <meta name="viewport" content="width=device-width, initial-scale=1">
  -->
+
 </head>
 <body>
-<div id="app"></div>
 
+<div id="app"></div>
 <script type="text/javascript" src="bundle.js"></script>
 
+	  <div id="twitch-embed"></div>
+
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        channel: "summit1g",
+        layout: 'video'
+      })
+    </script>
+
+<script type="text/javascript" src="bundle.js"></script>
 
 
 
@@ -20,3 +35,37 @@
 </div>
 </body>
 </html>
+
+
+<!-- plain
+
+<script type="text/javascript" src="bundle.js"></script>
+
+	  <div id="twitch-embed"></div>
+
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        channel: "summit1g",
+        layout: 'video'
+      })
+    </script>
+
+ -->
+
+<!-- 
+     <div id="twitch-embed"></div>
+
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <script type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 854,
+        height: 480,
+        channel: "monstercat"
+      });
+    </script>
+   -->

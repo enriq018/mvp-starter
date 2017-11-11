@@ -3,15 +3,21 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 // import List from './components/List.jsx';
 import Bars from './components/Bars.jsx';
+import Screens from './components/Screens.jsx';
+import twitchData from './twitchData';
+//7fat6yyl6puo9pjt6eypzfciu04pyj
+
 
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      streams: [],
-      streamerNames: []
+      streams: ['a'],
+      streamerNames: ['a', 'b', 'c', 'd'],
+      twitchData: twitchData
     }
+    this.changeStreams = this.changeStreams.bind(this);
   }
 
   // componentDidMount() {
@@ -28,11 +34,20 @@ class App extends React.Component {
   //   });
   // }
 
+  changeStreams(e) {
+    console.log(e)
+    var MOCKDATA = [];
+    for(var i = 0; i < e; i++){MOCKDATA.push(e)}
+    this.setState({streams: MOCKDATA})
+  }
+
   render () {
     return (
     <div className = 'container-fluid'>
       <h1>APP</h1>
-      <Bars/>
+      <Bars changeStreams = {this.changeStreams} />
+      <Screens streams = {this.state.streams} 
+      streamerNames = {this.state.streamerNames} twitchData = {this.state.twitchData.data}/>
     </div>
 
     )
