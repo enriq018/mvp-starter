@@ -1,0 +1,17 @@
+body {
+  background-color: DarkSlateBlue
+}
+
+.container {
+}
+
+.view {
+		border: 5px solid blue;
+		padding: 5px
+
+}
+
+h1 {
+	 text-align: center;
+	 color: white;
+}

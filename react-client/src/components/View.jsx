@@ -27,29 +27,29 @@ class View extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			stuff:'',
-			test: ['Action', 'plzzzzz','reandom']
+			index: this.props.index,
 		}
 
 
 	}
 
+	userName(obj) {
+	  return obj.thumbnail_url.split('_')[2].split('-')[0]
+	}
+
 	render() {
 		return (
-		 		<div className = "col-5">
+		 		<div className = "col-5 view">
 			<div className="dropdown">
 		  	<button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		    Dropdown
+		    Streamers
 		  	</button>
-		  	<div className="dropdown-menu" aria-labelledby="dropdownMenu1">
-		  		{this.props.twitchData.map((el, index)=> <a key = {index} className="dropdown-item" href="#!">{el.thumbnail_url.split('_')[2].split('-')[0]} </a> )}
-		
+		  	<div className="dropdown-menu" aria-labelledby="dropdownMenu1" >
+		  		{this.props.twitchData.map((el, index)=> <a onClick = {() => this.props.updateStreamer(this.userName(el), this.state.index)} key = {index} className="dropdown-item" >{this.userName(el)}</a> )}
 		 		</div>
 				</div>
 	    <iframe src="http://www.youtube.com/embed/W7qWa52k-nE"
-   width="300" height="300" frameBorder="15" allowFullScreen></iframe>
-
-
+   width="400" height="300" frameBorder="15" allowFullScreen></iframe>
 		</div>
 		  
 		  

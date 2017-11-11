@@ -13,11 +13,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      streams: ['a'],
-      streamerNames: ['a', 'b', 'c', 'd'],
-      twitchData: twitchData
+      streamsOpen: ['a'],
+      streamerNames: ['imaqtpie', 'imaqtpie', 'imaqtpie', 'imaqtpie'],
+      twitchData: twitchData,
+      savedGroups: ['dongsquad', 'anotha one']
     }
-    this.changeStreams = this.changeStreams.bind(this);
+    this.numberOfStreams = this.numberOfStreams.bind(this);
+    this.updateStreamer = this.updateStreamer.bind(this);
+    this.saveGroup = this.saveGroup.bind(this);
   }
 
   // componentDidMount() {
@@ -34,19 +37,57 @@ class App extends React.Component {
   //   });
   // }
 
-  changeStreams(e) {
+//USE TWITCH API AFTER GROUPS TO DB WORKING , we can use mock for now 
+
+//ON LOAD & GET
+//get live streamers 
+//get saved groups 
+
+//POST 
+// add streamers and group name. 
+
+
+
+  numberOfStreams(e) {
     console.log(e)
     var MOCKDATA = [];
     for(var i = 0; i < e; i++){MOCKDATA.push(e)}
-    this.setState({streams: MOCKDATA})
+    this.setState({streamsOpen: MOCKDATA})
+  }
+
+  updateStreamer(name, index) {
+    var old = this.state.streamerNames;
+    old[index] = name;
+    this.setState({streamerNames: old});
+    console.log('===========', this.state.streamerNames)
+  }
+
+  saveGroup(groupName) {
+    //send groupName and current streamerNames
+    var data = {groupName:groupName, streamerNames: this.state.streamerNames};
+    console.log(data);
+    $.ajax({
+      type: "POST",
+      url: 'http://127.0.0.1:3000/groups',
+      contentType: 'application/json',
+      dataType: 'json',
+      data: JSON.stringify(data),
+      success: (data)=> {
+        console.log('success')
+      },
+      error: (data) => {
+        console.log('error')
+      },
+    });
+
   }
 
   render () {
     return (
-    <div className = 'container-fluid'>
-      <h1>APP</h1>
-      <Bars changeStreams = {this.changeStreams} />
-      <Screens streams = {this.state.streams} 
+    <div className = 'container'>
+      <h1 className ="title">Twitchy</h1>
+      <Bars numberOfStreams = {this.numberOfStreams} saveGroup = {this.saveGroup} savedGroups = {this.state.savedGroups} />
+      <Screens streamsOpen = {this.state.streamsOpen} updateStreamer = {this.updateStreamer}
       streamerNames = {this.state.streamerNames} twitchData = {this.state.twitchData.data}/>
     </div>
 
