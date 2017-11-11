@@ -18,7 +18,8 @@ class Screens extends React.Component {
 		  <div className="container">
 		  	<div className="row">
 
-		  {this.props.streams.map((el, index) => <View streamerNames = {el} key = {index}/>)}
+
+		  {this.props.streams.map((el, index) => <View streamerNames = {el} key = {index} twitchData = {this.props.twitchData}/>)}
 		  	</div>
 			</div>
 		  

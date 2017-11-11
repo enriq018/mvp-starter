@@ -42,7 +42,7 @@ class View extends React.Component {
 		    Dropdown
 		  	</button>
 		  	<div className="dropdown-menu" aria-labelledby="dropdownMenu1">
-		  		{this.state.test.map((el, index)=> <a key = {index} className="dropdown-item" href="#!">{el} </a> )}
+		  		{this.props.twitchData.map((el, index)=> <a key = {index} className="dropdown-item" href="#!">{el.thumbnail_url.split('_')[2].split('-')[0]} </a> )}
 		
 		 		</div>
 				</div>
