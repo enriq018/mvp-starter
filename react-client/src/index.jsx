@@ -23,19 +23,39 @@ class App extends React.Component {
     this.saveGroup = this.saveGroup.bind(this);
   }
 
-  // componentDidMount() {
-  //   $.ajax({
-  //     url: '/items', 
-  //     success: (data) => {
-  //       this.setState({
-  //         items: data
-  //       })
-  //     },
-  //     error: (err) => {
-  //       console.log('err', err);
-  //     }
-  //   });
-  // }
+
+    getRequest() {
+    $.ajax({
+      type: "GET",
+      url: 'http://127.0.0.1:3000/groups',
+      contentType: 'application/json',
+      dataType: 'json',
+      success: (data)=> {
+        console.log('success', data)
+        // this.setState({twitchData: data})
+      },
+      error: (data) => {
+        console.log('error')
+      },
+    });
+
+  }
+
+  componentDidMount() {
+   $.ajax({
+      type: "GET",
+      url: 'http://127.0.0.1:3000/groups',
+      contentType: 'application/json',
+      dataType: 'json',
+      success: (data)=> {
+        console.log('MOUNT success', data)
+        this.setState({twitchData: data})
+      },
+      error: (data) => {
+        console.log('error')
+      },
+    });
+  }
 
 //USE TWITCH API AFTER GROUPS TO DB WORKING , we can use mock for now 
 
@@ -73,7 +93,7 @@ class App extends React.Component {
       dataType: 'json',
       data: JSON.stringify(data),
       success: (data)=> {
-        console.log('success')
+        console.log('POST REQ SUCCESS', data)
       },
       error: (data) => {
         console.log('error')

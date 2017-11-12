@@ -8,7 +8,6 @@ var connection = mysql.createConnection({
 });
 
 var selectAllStreamers = function(callback) {
-
   connection.query('SELECT * FROM streamerNames', function(err, results, fields) {
     if(err) {
       callback(err, null);
@@ -19,11 +18,8 @@ var selectAllStreamers = function(callback) {
 };
 
 var addStreamerName = function(name, callback) {
-    //insert into streamerNames (streamerNames) VALUES ('trick2g')
     console.log('===========================', name)
-    var q = `insert into streamerNames (streamerNames) VALUES ('${name}')`
-
-
+    var q = `insert ignore into streamerNames (streamerNames) VALUES ('${name}')`
   connection.query(q, function(err, results, fields) {
     if(err) {
       callback(err)
@@ -31,6 +27,10 @@ var addStreamerName = function(name, callback) {
       callback(name)
     }
   })
+}
+
+var addGroup = function (obj, callback) {
+  
 
 }
 

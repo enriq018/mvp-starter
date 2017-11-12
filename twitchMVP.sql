@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS streamerNames;
 
 CREATE TABLE streamerNames (
   streamerId INTEGER NOT NULL AUTO_INCREMENT,
-  streamerNames VARCHAR(20),
+  streamerNames VARCHAR(20) UNIQUE,
   PRIMARY KEY (streamerId)
 );
 
@@ -25,3 +25,8 @@ CREATE TABLE streamerXgroup (
   groupId INTEGER NOT NULL ,
   PRIMARY KEY (joinId)
 );
+
+
+-- INSERT INTO groupNames (groupName) VALUES ('GOOD');
+-- SELECT groupId FROM groupNames WHERE groupName = 'GOOD';
+-- SELECT streamerId FROM streamerNames WHERE streamerNames = 'gosutv';

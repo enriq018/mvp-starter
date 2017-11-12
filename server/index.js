@@ -20,18 +20,28 @@ app.use(bodyParser.json())
 
 //GET streamer names from twitch API
 app.get('/groups', function (req, res) {
+	//options containing token and url
 	var options = {
-	  url: 'https://api.twitch.tv/helix/streams?first=20',
+	  url: 'https://api.twitch.tv/helix/streams?first=15',
 	  headers: {'Client-ID': '7fat6yyl6puo9pjt6eypzfciu04pyj'}
 	}
-
+	//request to twitch
 	request(options, function (err, response, body) {
+		//take streamer names out of response and add to database / send back to client 
 		var names = JSON.parse(body).data.map(el=> el.thumbnail_url.split('_')[2].split('-')[0])
 		names.forEach(el => db.addStreamerName(el, function(e){console.log(e, 'was added to streamerNames Table')}))
 		res.status(200);
-		res.send('cross em')
+		res.send(JSON.parse(body));
 	})
-	
+})
+
+//POST 
+app.post('/groups', function(req, res) {
+	db.addGroup(req.body, function(data){
+	  res.status(201);
+	  res.send('added', JSON.stringify(req.body))
+	})
+
 })
 
 
