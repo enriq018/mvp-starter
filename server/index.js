@@ -37,9 +37,11 @@ app.get('/groups', function (req, res) {
 
 //POST 
 app.post('/groups', function(req, res) {
-	db.addGroup(req.body, function(data){
+// var data = {groupName:groupName, streamerNames: this.state.streamerNames};
+
+	db.addGroup(req.body.groupName, req.body.streamerNames, function(data){
 	  res.status(201);
-	  res.send('added', JSON.stringify(req.body))
+	  res.send('checkit')
 	})
 
 })
