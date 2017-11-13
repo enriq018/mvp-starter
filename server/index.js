@@ -35,13 +35,27 @@ app.get('/groups', function (req, res) {
 	})
 })
 
+app.get('/groupList', function(req, res) {
+	db.getAllGroups(function(data) {
+		res.status(200);
+		res.send(data);
+	})
+})
+
+
+app.post('/groupRoom', function(req, res) {
+	db.getGroupRoom(req.body.room, function(data) {
+		res.status(201);
+		res.send(data);
+	})
+})
 //POST 
 app.post('/groups', function(req, res) {
 // var data = {groupName:groupName, streamerNames: this.state.streamerNames};
 
 	db.addGroup(req.body.groupName, req.body.streamerNames, function(data){
 	  res.status(201);
-	  res.send('checkit')
+	  res.send()
 	})
 
 })

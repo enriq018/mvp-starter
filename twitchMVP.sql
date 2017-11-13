@@ -32,5 +32,7 @@ CREATE TABLE streamerXgroup (
 --     SELECT streamerId FROM streamerNames WHERE streamerNames = 'gosutv';
 --     INSERT INTO streamerXgroup (streamerId, groupId) VALUES (12,1);
 
+SELECT * FROM groupNames
+
 
   

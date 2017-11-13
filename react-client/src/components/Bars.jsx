@@ -43,7 +43,7 @@ class Bars extends React.Component {
 		  	<div className="dropdown-menu" aria-labelledby="dropdownMenu1">
 
 
-				{this.props.savedGroups.map((el, index)=> 	<a className="dropdown-item" key = {index}> {el}</a>	 )}
+				{this.props.savedGroups.map((el, index)=> 	<a className="dropdown-item" key = {index} onClick = {()=> this.props.getRoomInfo(el)} > {el}</a>	 )}
 
 		 		</div>
 				</div>

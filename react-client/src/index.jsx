@@ -16,11 +16,12 @@ class App extends React.Component {
       streamsOpen: ['a'],
       streamerNames: ['imaqtpie', 'imaqtpie', 'imaqtpie', 'imaqtpie'],
       twitchData: twitchData,
-      savedGroups: ['dongsquad', 'anotha one']
+      savedGroups: ['test1, test2']
     }
     this.numberOfStreams = this.numberOfStreams.bind(this);
     this.updateStreamer = this.updateStreamer.bind(this);
     this.saveGroup = this.saveGroup.bind(this);
+    this.getRoomInfo = this.getRoomInfo.bind(this);
   }
 
 
@@ -41,6 +42,23 @@ class App extends React.Component {
 
   }
 
+  getRoomNames() {
+    $.ajax({
+      type: "GET",
+      url: 'http://127.0.0.1:3000/groupList',
+      contentType: 'application/json',
+      dataType: 'json',
+      success: (data)=> {
+        console.log('MOUNT2 success', data)
+        var groupListRecieved = data.map(el => el.groupName)
+        this.setState({savedGroups: groupListRecieved})
+      },
+      error: (data) => {
+        console.log('error')
+      },
+    });
+  }
+
   componentDidMount() {
    $.ajax({
       type: "GET",
@@ -50,6 +68,21 @@ class App extends React.Component {
       success: (data)=> {
         console.log('MOUNT success', data)
         this.setState({twitchData: data})
+      },
+      error: (data) => {
+        console.log('error')
+      },
+    });
+
+    $.ajax({
+      type: "GET",
+      url: 'http://127.0.0.1:3000/groupList',
+      contentType: 'application/json',
+      dataType: 'json',
+      success: (data)=> {
+        console.log('MOUNT2 success', data)
+        var groupListRecieved = data.map(el => el.groupName)
+        this.setState({savedGroups: groupListRecieved})
       },
       error: (data) => {
         console.log('error')
@@ -96,17 +129,37 @@ class App extends React.Component {
         console.log('POST REQ SUCCESS', data)
       },
       error: (data) => {
-        console.log('error')
+        console.log('error 131')
       },
     });
 
+  }
+
+
+
+  getRoomInfo(selectedRoom){
+    var data = {room:selectedRoom}
+    $.ajax({
+      type: "POST",
+      url: 'http://127.0.0.1:3000/groupRoom',
+      contentType: 'application/json',
+      dataType: 'json',
+      data: JSON.stringify(data),
+      success: (data)=> {
+        console.log('Got room data', data)
+      },
+      error: (data) => {
+        console.log('error 131')
+      },
+    });
   }
 
   render () {
     return (
     <div className = 'container'>
       <h1 className ="title">Twitchy</h1>
-      <Bars numberOfStreams = {this.numberOfStreams} saveGroup = {this.saveGroup} savedGroups = {this.state.savedGroups} />
+      <Bars numberOfStreams = {this.numberOfStreams} saveGroup = {this.saveGroup} 
+      savedGroups = {this.state.savedGroups} getRoomInfo = {this.getRoomInfo}/>
       <Screens streamsOpen = {this.state.streamsOpen} updateStreamer = {this.updateStreamer}
       streamerNames = {this.state.streamerNames} twitchData = {this.state.twitchData.data}/>
     </div>
