@@ -101,7 +101,7 @@ var getGroupRoom = function (groupName, callback) {
           console.log(JSON.parse(JSON.stringify(results2)).map(el=>el.streamerId))
           var streamerIds = JSON.parse(JSON.stringify(results2)).map(el=>el.streamerId)
           console.log('PLEASEEEEEEEEEEEEEEEEEEEEEE', streamerIds)
-          for(var i =0; i < 5; i++) {
+          for(var i =0; i < 4; i++) {
             if(streamerIds[i] === undefined) {
               streamerIds[i] = 1;
             }

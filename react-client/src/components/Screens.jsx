@@ -20,7 +20,7 @@ class Screens extends React.Component {
 
 
 		  {this.props.streamsOpen.map((el, i) => 
-		  	<View streamerNames = {el} index = {i} key = {i}  twitchData = {this.props.twitchData}
+		  	<View streamerNames = {this.props.streamerNames} index = {i} key = {i}  twitchData = {this.props.twitchData}
 		  	 updateStreamer = {this.props.updateStreamer}/>)}
 		  	</div>
 			</div>

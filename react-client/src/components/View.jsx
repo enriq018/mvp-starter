@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-
+import Twitch from './twitch.jsx';
 // const View = (props) => (
 
 // 		<div className = "col-5">
@@ -40,16 +40,18 @@ class View extends React.Component {
 	render() {
 		return (
 		 		<div className = "col-5 view">
+		 		{console.log('-------',this.props.streamerNames)}
 			<div className="dropdown">
 		  	<button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		    Streamers
 		  	</button>
+				<button type="button" className="btn btn-primary">{this.props.streamerNames[this.props.index]}</button>
 		  	<div className="dropdown-menu" aria-labelledby="dropdownMenu1" >
 		  		{this.props.twitchData.map((el, index)=> <a onClick = {() => this.props.updateStreamer(this.userName(el), this.state.index)} key = {index} className="dropdown-item" >{this.userName(el)}</a> )}
 		 		</div>
 				</div>
-	    <iframe src="http://www.youtube.com/embed/W7qWa52k-nE"
-   width="400" height="300" frameBorder="15" allowFullScreen></iframe>
+				<Twitch streamerNames = {this.props.streamerNames[this.props.index]}/>
+
 		</div>
 		  
 		  
@@ -62,6 +64,7 @@ class View extends React.Component {
 export default View;
 
 
+
 // <div id="app"></div>
 //     <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
@@ -72,3 +75,7 @@ export default View;
 //         channel: "monstercat"
 //       });
 //     </script>
+
+
+	  //   <iframe src="http://www.youtube.com/embed/W7qWa52k-nE"
+   // width="400" height="300" frameBorder="15" allowFullScreen></iframe>

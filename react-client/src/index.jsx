@@ -14,7 +14,7 @@ class App extends React.Component {
     super(props);
     this.state = { 
       streamsOpen: ['a'],
-      streamerNames: ['imaqtpie', 'imaqtpie', 'imaqtpie', 'imaqtpie'],
+      streamerNames: ['tekken', 'imaqtpie', 'imaqtpie', 'imaqtpie'],
       twitchData: twitchData,
       savedGroups: ['test1, test2']
     }
@@ -147,6 +147,12 @@ class App extends React.Component {
       data: JSON.stringify(data),
       success: (data)=> {
         console.log('Got room data', data)
+          for(var i =0; i < 4; i++) {
+            if(data[i] === undefined) {
+              data[i] = 'imaqtpie';
+            }
+          }
+          this.setState({streamerNames:data})
       },
       error: (data) => {
         console.log('error 131')
