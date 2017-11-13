@@ -39,26 +39,26 @@ class View extends React.Component {
 
 	render() {
 		return (
-		 		<div className = "col-5 view">
-		 		{console.log('-------',this.props.streamerNames)}
-			<div className="dropdown">
-		  	<button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		    Streamers
-		  	</button>
-				<button type="button" className="btn btn-primary">{this.props.streamerNames[this.props.index]}</button>
-		  	<div className="dropdown-menu" aria-labelledby="dropdownMenu1" >
-		  		{this.props.twitchData.map((el, index)=> <a onClick = {() => this.props.updateStreamer(this.userName(el), this.state.index)} key = {index} className="dropdown-item" >{this.userName(el)}</a> )}
-		 		</div>
-				</div>
-				<Twitch streamerNames = {this.props.streamerNames[this.props.index]}/>
+		 		<div className = "col-6 view">
+		 		<div className = 'viewContainer'>
+					<div className="dropdown">
+		  			<button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" 
+		  				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		    			Streamers
+		  				</button>
+						<button type="button" className="btn btn-primary">{this.props.streamerNames[this.props.index]}</button>
+						<button type="button" className="btn btn-info">Viewers: {this.props.twitchData[this.props.index].viewer_count}</button>
 
-		</div>
-		  
-		  
+		  			<div className="dropdown-menu" aria-labelledby="dropdownMenu1" >
+		  				{this.props.twitchData.map((el, index)=> <a onClick = {() => this.props.updateStreamer(this.userName(el), this.state.index)} 
+		  				key = {index} className="dropdown-item" >{this.userName(el)}</a> )}
+		 				</div>
+						</div>
+					<Twitch streamerNames = {this.props.streamerNames[this.props.index]}/>
+					</div>
+				</div> 
 		)
-
 	}
-
 }
 
 export default View;

@@ -18,6 +18,7 @@ class Bars extends React.Component {
 	render() {
 		return (
 			<div className="container-fluid">
+			<div className='bar'>
 			  <div className="row">
 			    <div className="col-4">
 					  <div className="btn-group btn-group-lg" role="group" aria-label="Basic example">
@@ -49,6 +50,7 @@ class Bars extends React.Component {
 				</div>
 			    			    </div>
 
+			  </div>
 			  </div>
 			</div>
 

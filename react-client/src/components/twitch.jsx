@@ -2,13 +2,12 @@ import React from 'react';
 
 const Test = (props) => (
 
-  <div>
-  {console.log('1111111111111111111', props.streamerNames)}
-          <iframe
+  <div className = 'container'>
+          <iframe className = 'twitchPlayer'
             src={`http://player.twitch.tv/?channel=${props.streamerNames}`}
             frameBorder='0'
-            height={`300px`}
-            width={`450px`}
+            height={`350px`}
+            width={`550px`}
             allowFullScreen='true'
           ></iframe>
   </div>
@@ -16,6 +15,4 @@ const Test = (props) => (
 
 
 export default Test
-
-//    return <div ref={el => (this.instance = el)} />;
 

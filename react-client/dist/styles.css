@@ -2,14 +2,28 @@ body {
   background-color: DarkSlateBlue
 }
 
-.container {
+.container-fluid {
+	padding: 10px;
 }
 
 .view {
-		border: 5px solid blue;
-		padding: 5px
 
 }
+
+.viewContainer {
+	padding: 5px;
+}
+
+.twitchPlayer {
+	background-color: black; 
+}
+
+.bar {
+	border: solid black 3px;
+	background-color: purple;
+	padding: 10px;
+}
+
 
 h1 {
 	 text-align: center;

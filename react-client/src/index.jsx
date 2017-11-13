@@ -14,7 +14,7 @@ class App extends React.Component {
     super(props);
     this.state = { 
       streamsOpen: ['a'],
-      streamerNames: ['tekken', 'imaqtpie', 'imaqtpie', 'imaqtpie'],
+      streamerNames: ['c9sneaky', 'imaqtpie', 'imaqtpie', 'imaqtpie'],
       twitchData: twitchData,
       savedGroups: ['test1, test2']
     }
@@ -162,7 +162,7 @@ class App extends React.Component {
 
   render () {
     return (
-    <div className = 'container'>
+    <div className = 'container-fluid'>
       <h1 className ="title">Twitchy</h1>
       <Bars numberOfStreams = {this.numberOfStreams} saveGroup = {this.saveGroup} 
       savedGroups = {this.state.savedGroups} getRoomInfo = {this.getRoomInfo}/>
